@@ -1,4 +1,4 @@
-import vercel from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -10,9 +10,7 @@ const config = {
 		typescript: true
 	}),
 	kit: {
-		adapter: vercel({
-			edge: false
-		})
+		adapter: adapter()
 	}
 };
 
